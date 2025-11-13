@@ -1,1 +1,10 @@
-
+{
+  "skills": [
+    { "name": "Machine Learning", "level": 90 },
+    { "name": "Data Analysis", "level": 85 },
+    { "name": "Python", "level": 95 },
+    { "name": "LangChain", "level": 80 },
+    { "name": "Streamlit", "level": 85 },
+    { "name": "Web Development", "level": 75 }
+  ]
+}
