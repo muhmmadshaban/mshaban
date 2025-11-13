@@ -13,13 +13,13 @@
     "description": "Created an AI chatbot application using Streamlit for the front end and FastAPI for the backend, facilitating user interaction with advanced AI models.",
     "image": "https://github.com/muhmmadshaban/AI-AGENT-CHATBOT-WITH-FASTAPI/blob/main/images/chat.png?raw=true",
     "tags": ["Python", "Streamlit", "FastAPI", "GPT-4", "Groq LLaMA"],
-    "link": "#" // Or a specific link if available
+    "link": "#" 
   },
   {
     "id": 3,
     "title": "Helmet Detection using YOLOv8",
     "description": "Developed a computer vision-based system using YOLOv8 to detect helmets on bike riders for road safety applications.",
-    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "image": "/api/placeholder/400/320", 
     "tags": ["Computer Vision", "YOLOv8", "OpenCV", "TensorFlow"],
     "link": "#"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Ghibli Image Converter",
     "description": "Created a Python-based tool to stylize user images with Studio Ghibli-inspired themes using deep learning image transformation techniques.",
-    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "image": "/api/placeholder/400/320", 
     "tags": ["Python", "TensorFlow", "PIL", "Deep Learning"],
     "link": "#"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Auto Spray Painter Machine",
     "description": "Designed and built a prototype for an automated spray painting machine using Arduino and mechanical components for uniform painting operations.",
-    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "image": "/api/placeholder/400/320",
     "tags": ["Arduino", "C++", "Hardware", "Automation"],
     "link": "#"
   }
