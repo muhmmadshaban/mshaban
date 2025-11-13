@@ -546,7 +546,7 @@
     <section id="home" class="hero">
         <div class="container hero-content">
             <h1>Hello, I'm <span>Muhmmad Shaban</span></h1> <!-- Name is hardcoded here -->
-            <p>AI Developer @Naventra AI | AI/ML Engineer | Graphic Designer</p>
+            <p>AI/ML Engineer & Researcher | Ex–AI Developer Intern @ Naventra AI | Building Agentic AI Systems | National Badminton Player | Lifelong Learner & Humble Human</p>
             <a href="#contact" class="btn">Get In Touch</a>
             <div class="social-links">
                 <a href="https://github.com/muhmmadshaban" target="_blank"><i class="fab fa-github"></i></a>
@@ -648,27 +648,52 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/muhmmadshaban" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/muhmmadshaban" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                       <a href="https://github.com/muhmmadshaban" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/muhmmadshaban" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://orcid.org/0009-0005-3878-7317" target="_blank"><i class="fab fa-orcid"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+  <form id="contactForm">
+    <div class="form-group">
+      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+      <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn">Send Message</button>
+    <p id="status"></p>
+  </form>
+</div>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzPfI-_N5WlpvzrkfoduzpFTMOENDrQgSFbyWkCDb_bpYzvz-oyVKlWtS-RMRruOBU/exec";  
+
+  document.getElementById("contactForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(e.target).entries());
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+    .then(response => {
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+      e.target.reset();
+    })
+    .catch(error => {
+      document.getElementById("status").innerText = "❌ Error sending message!";
+    });
+  });
+</script>
+
             </div>
         </div>
     </section>
