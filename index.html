@@ -551,6 +551,7 @@
             <div class="social-links">
                 <a href="https://github.com/muhmmadshaban" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/muhmmadshaban" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://orcid.org/0009-0005-3878-7317" target="_blank"><i class="fab fa-orcid"></i></a>
                 <a href="mailto:mshaban0121@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="tel:8273185786"><i class="fas fa-phone"></i></a>
             </div>
@@ -762,89 +763,6 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href').substring(1) === current) {
             link.classList.add('active');
         }
-    });
-});
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Get form data
-    const formData = new FormData(contactForm);
-    let formValues = {};
-    for (let [key, value] of formData.entries()) {
-        formValues[key] = value;
-    }
-    // Create loading indicator
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
-    // Simulate form submission with fetch API
-    // Replace 'https://your-form-endpoint.com' with your actual form endpoint
-    fetch('https://formspree.io/f/xwpoznng', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error('Network response was not ok.');
-    })
-    .then(data => {
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message';
-        successMessage.textContent = 'Thanks for your message! I\'ll get back to you soon.';
-        successMessage.style.backgroundColor = 'rgba(0, 200, 150, 0.1)';
-        successMessage.style.color = 'var(--highlight-color)';
-        successMessage.style.padding = '15px';
-        successMessage.style.borderRadius = '5px';
-        successMessage.style.marginTop = '20px';
-        successMessage.style.textAlign = 'center';
-        // Add success message to the form
-        contactForm.appendChild(successMessage);
-        // Reset form and button
-        contactForm.reset();
-        submitBtn.innerHTML = originalBtnText;
-        submitBtn.disabled = false;
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-            successMessage.style.opacity = '0';
-            successMessage.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => {
-                contactForm.removeChild(successMessage);
-            }, 500);
-        }, 5000);
-    })
-    .catch(error => {
-        // Show error message
-        const errorMessage = document.createElement('div');
-        errorMessage.className = 'error-message';
-        errorMessage.textContent = 'Oops! Something went wrong. Please try again later.';
-        errorMessage.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
-        errorMessage.style.color = '#ff3333';
-        errorMessage.style.padding = '15px';
-        errorMessage.style.borderRadius = '5px';
-        errorMessage.style.marginTop = '20px';
-        errorMessage.style.textAlign = 'center';
-        // Add error message to the form
-        contactForm.appendChild(errorMessage);
-        // Reset button
-        submitBtn.innerHTML = originalBtnText;
-        submitBtn.disabled = false;
-        // Remove error message after 5 seconds
-        setTimeout(() => {
-            errorMessage.style.opacity = '0';
-            errorMessage.style.transition = 'opacity 0.5s ease';
-            setTimeout(() => {
-                contactForm.removeChild(errorMessage);
-            }, 500);
-        }, 5000);
-        console.error('Error:', error);
     });
 });
 // Typing Animation
