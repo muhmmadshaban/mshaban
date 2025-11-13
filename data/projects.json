@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "FinSolve – Enterprise Chatbot Platform",
+    "description": "Built a secure, role-based internal chatbot and analytics platform using Streamlit and FastAPI. Supports real-time Q&A from department-tagged docs, role-based login, vector DB search, and admin dashboards.",
+    "image": "https://media.licdn.com/dms/image/v2/D5622AQG3bMcMz1KpaA/feedshare-shrink_2048_1536/B56ZfFD7H4HEAo-/0/1751357831692?e=1755734400&v=beta&t=EKeATRHUaSGuSe4A0caEI5yjpNpt40-bWpcOeleCK_Y",
+    "tags": ["Python", "Streamlit", "FastAPI", "FAISS", "Hugging Face", "Enterprise", "Analytics"],
+    "link": "https://github.com/muhmmadshaban/finsolve"
+  },
+  {
+    "id": 2,
+    "title": "AI Chatbot Application",
+    "description": "Created an AI chatbot application using Streamlit for the front end and FastAPI for the backend, facilitating user interaction with advanced AI models.",
+    "image": "https://github.com/muhmmadshaban/AI-AGENT-CHATBOT-WITH-FASTAPI/blob/main/images/chat.png?raw=true",
+    "tags": ["Python", "Streamlit", "FastAPI", "GPT-4", "Groq LLaMA"],
+    "link": "#" // Or a specific link if available
+  },
+  {
+    "id": 3,
+    "title": "Helmet Detection using YOLOv8",
+    "description": "Developed a computer vision-based system using YOLOv8 to detect helmets on bike riders for road safety applications.",
+    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "tags": ["Computer Vision", "YOLOv8", "OpenCV", "TensorFlow"],
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Ghibli Image Converter",
+    "description": "Created a Python-based tool to stylize user images with Studio Ghibli-inspired themes using deep learning image transformation techniques.",
+    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "tags": ["Python", "TensorFlow", "PIL", "Deep Learning"],
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Auto Spray Painter Machine",
+    "description": "Designed and built a prototype for an automated spray painting machine using Arduino and mechanical components for uniform painting operations.",
+    "image": "/api/placeholder/400/320", // Placeholder or actual path
+    "tags": ["Arduino", "C++", "Hardware", "Automation"],
+    "link": "#"
+  }
+]
